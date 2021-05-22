@@ -66,7 +66,7 @@ const Sidebar = () => {
         Email Me
       </button>
       <button
-        className="w-10/12 px-5 py-2 my-2 text-white rounded-full bg-gradient-to-r from-primary to-secondary"
+        className="w-10/12 px-5 py-2 my-2 text-white rounded-full bg-gradient-to-r from-primary to-secondary focus:outline-none"
         onClick={() => toggleTheme()}
       >
         Toggle theme

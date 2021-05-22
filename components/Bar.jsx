@@ -1,15 +1,36 @@
+import { motion } from 'framer-motion'
+
 const Bar = ({ value: { Icon, level, name } }) => {
   const bar_width = `${level}%`
+
+  const variants = {
+    initial: {
+      width: 0,
+    },
+    animate: {
+      width: bar_width,
+      transition: {
+        duration: 0.4,
+        type: 'spring',
+        damping: 10,
+        stiffness: 100,
+      },
+    },
+  }
+
   return (
     <div className="my-2 text-white bg-gray-300 rounded-full dark:bg-dark-300 dark:bg-black-500">
-      <div
+      <motion.div
         className="flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-primary to-secondary"
         style={{
           width: bar_width,
         }}
+        variants={variants}
+        initial="initial"
+        animate="animate"
       >
         <Icon className="w-3 h-3 mr-1 min-w-min" /> {name}
-      </div>
+      </motion.div>
     </div>
   )
 }
