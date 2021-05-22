@@ -21,7 +21,7 @@ const Bar = ({ value: { Icon, level, name } }) => {
   return (
     <div className="my-2 text-white bg-gray-300 rounded-full dark:bg-dark-300 dark:bg-black-500">
       <motion.div
-        className="flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-primary to-secondary"
+        className="flex items-center px-3 py-1 space-x-2 rounded-full bg-gradient-to-r from-primary to-secondary"
         style={{
           width: bar_width,
         }}
