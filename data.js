@@ -22,10 +22,10 @@ export const services = [
     Icon: FaServer,
   },
   {
-    title: { en: 'API Development', ru: '' },
+    title: { en: 'API Development', ru: 'Интеграция сервисов' },
     about: {
       en: 'I can develop robust REST API using <b>django-rest-api</b> & <b>Node API</b>',
-      ru: '',
+      ru: 'Интеграция любых сервисов где есть API, например подключение CRM или эквайринга',
     },
     Icon: AiOutlineApi,
   },
