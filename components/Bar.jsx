@@ -31,8 +31,8 @@ const Bar = ({ value: { Icon, level, name } }) => {
       >
         <div>
           <Icon className="w-3 h-3" />
-        </div>{' '}
-        <div>{name}</div>
+        </div>
+        <div className="ml-2">{name}</div>
       </motion.div>
     </div>
   )
