@@ -7,6 +7,7 @@ import { fadeInUp, stagger } from '../animations'
 
 function ProjectCard({
   project: {
+    id,
     name,
     image_url,
     category,
@@ -15,25 +16,28 @@ function ProjectCard({
     github_url,
     key_techs,
   },
+  showDetail,
+  setShowDetail,
 }) {
-  const [showDetail, setShowDetail] = useState(false)
-
   return (
     <div>
       <Image
         src={image_url}
         alt={name['ru']}
         className="cursor-pointer"
-        onClick={() => setShowDetail(true)}
+        onClick={() => setShowDetail(id)}
         layout="responsive"
         height="200"
         width="300"
       />
-      <p className="my-2 text-center">{name['ru']}</p>
-      {showDetail && (
-        <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100">
+      <p className="my-2 text-center">{name && name['ru']}</p>
+      {showDetail === id && (
+        <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 rounded-lg md:p-10 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100">
           <motion.div variants={stagger} initial="initial" animate="animate">
-            <motion.div variants={fadeInUp}>
+            <motion.div
+              variants={fadeInUp}
+              className="border-4 border-gray-100"
+            >
               <Image
                 src={image_url}
                 alt={name['ru']}
@@ -65,10 +69,10 @@ function ProjectCard({
               variants={fadeInUp}
               className="mb-3 text-lg font-medium md:text-2xl"
             >
-              {name['ru']}
+              {name && name['ru']}
             </motion.h2>
             <motion.h3 variants={fadeInUp} className="mb-3 font-medium">
-              {description['ru']}
+              {description && description['ru']}
             </motion.h3>
             <motion.div
               variants={fadeInUp}
@@ -85,7 +89,7 @@ function ProjectCard({
             </motion.div>
           </motion.div>
           <button
-            onClick={() => setShowDetail(false)}
+            onClick={() => setShowDetail(null)}
             className="absolute p-1 bg-gray-200 rounded-full top-3 right-3 focus:outline-none dark:bg-dark-200"
           >
             <MdClose size={30} />

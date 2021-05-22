@@ -99,6 +99,7 @@ export const tools = [
 
 export const projects = [
   {
+    id: 1,
     name: {
       en: 'Breaking Bad',
       ru: 'Во все тяжкие',
@@ -116,6 +117,7 @@ export const projects = [
     category: ['react'],
   },
   {
+    id: 2,
     name: {
       en: 'Game of Thrones',
       ru: 'Игра престолов',
@@ -133,6 +135,7 @@ export const projects = [
     category: ['react'],
   },
   {
+    id: 3,
     name: {
       en: 'Fitnes Food',
       ru: 'Еда для фитнеса',
@@ -150,6 +153,7 @@ export const projects = [
     category: ['react'],
   },
   {
+    id: 4,
     name: {
       en: 'Picso',
       ru: 'Picso',
@@ -167,11 +171,48 @@ export const projects = [
     category: ['react'],
   },
   {
+    id: 5,
     name: {
       en: 'LubProd',
       ru: 'ЛюбПрод',
     },
-    descripyion: {
+    description: {
+      en: 'Order a site for a ready layout from LubProd',
+      ru: 'Заказ сайта по готовому макету от ЛюбПрод',
+    },
+    image_url:
+      'https://github.com/Escalion86/lubprod/blob/master/screenshot.png?raw=true',
+    key_techs: ['React', 'Tailwind CSS'],
+    github_url: 'https://github.com/Escalion86/lubprod',
+    deployed_url: 'http://lubprod.escalion.ru',
+    status: 'In developing',
+    category: ['react'],
+  },
+  {
+    id: 5,
+    name: {
+      en: 'LubProd',
+      ru: 'ЛюбПрод',
+    },
+    description: {
+      en: 'Order a site for a ready layout from LubProd',
+      ru: 'Заказ сайта по готовому макету от ЛюбПрод',
+    },
+    image_url:
+      'https://github.com/Escalion86/lubprod/blob/master/screenshot.png?raw=true',
+    key_techs: ['React', 'Tailwind CSS'],
+    github_url: 'https://github.com/Escalion86/lubprod',
+    deployed_url: 'http://lubprod.escalion.ru',
+    status: 'In developing',
+    category: ['react'],
+  },
+  {
+    id: 5,
+    name: {
+      en: 'LubProd',
+      ru: 'ЛюбПрод',
+    },
+    description: {
       en: 'Order a site for a ready layout from LubProd',
       ru: 'Заказ сайта по готовому макету от ЛюбПрод',
     },
