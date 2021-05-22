@@ -221,7 +221,8 @@ export const projects = [
       'https://github.com/Escalion86/InterDB/blob/master/Promo_IndividualCRM.jpg?raw=true',
     key_techs: ['React Native'],
     github_url: 'https://github.com/Escalion86/InterDB',
-    deployed_url: null,
+    deployed_url:
+      'https://play.google.com/store/apps/details?id=com.escalion.Individual_CRM',
     status: 'In developing',
     category: ['Мобильные приложения'],
   },
