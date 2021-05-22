@@ -13,16 +13,22 @@ const About = () => {
       exit="exit"
     >
       <h5 className="my-3 font-medium">
-        I am currently pursuing B.Tech Degree(Final Year) in Computer Science
+        Разработчик сайтов и приложений полного цикла (FullStack Developer).{' '}
+        <br />
+        Мой девиз: <i>"Нет ничего невозможного"</i>
+        Мне нравится делать качественные продукты, которые помогают людям
+        {/* I am currently pursuing B.Tech Degree(Final Year) in Computer Science
         Engineering from Academy of Technology/ I have 3+ years of experience in
         Web Development and iI have a Youtube Channel where I teach Full Stack
-        Web Development Projects
+        Web Development Projects */}
       </h5>
       <div
         className="flex-grow p-4 mt-5 bg-gray-400 dark:bg-dark-100"
         style={{ marginLeft: '-1.5rem', marginRight: '-1.5rem' }}
       >
-        <h6 className="my-3 text-xl font-bold tracking-wide">What I Offer</h6>
+        <h6 className="my-3 text-xl font-bold tracking-wide">
+          Что я предлагаю
+        </h6>
         <motion.div
           className="grid gap-6 lg:grid-cols-2"
           variants={stagger}
@@ -33,7 +39,7 @@ const About = () => {
             <motion.div
               variants={fadeInUp}
               className="bg-gray-200 rounded-lg dark:bg-dark-200 lg:col-span-1"
-              key={service.title}
+              key={service.title['ru']}
             >
               <ServiceCard service={service} />
             </motion.div>

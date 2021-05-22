@@ -7,12 +7,12 @@ import { projects as projectsData } from '../data'
 
 function Projects() {
   const [projects, setProjects] = useState(projectsData)
-  const [active, setActive] = useState('all')
+  const [active, setActive] = useState('Все')
 
   const [showDetail, setShowDetail] = useState(null)
 
   const handlerFilterCategory = (category) => {
-    if (category === 'all') {
+    if (category === 'Все') {
       setProjects(projectsData)
     } else {
       const newArray = projectsData.filter((project) =>

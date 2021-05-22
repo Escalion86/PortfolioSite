@@ -1,5 +1,5 @@
 function NavItem({ value, handlerFilterCategory, active }) {
-  let className = 'capitalize cursor-pointer hover:text-primary'
+  let className = 'cursor-pointer hover:text-primary'
   if (active === value) className += ' text-primary'
 
   return (
@@ -11,12 +11,10 @@ function NavItem({ value, handlerFilterCategory, active }) {
 
 function ProjectsNavbar(props) {
   return (
-    <div className="flex px-3 py-2 space-x-3 list-none overscroll-x-auto">
-      <NavItem value="all" {...props} />
-      <NavItem value="react" {...props} />
-      <NavItem value="node" {...props} />
-      <NavItem value="mongo" {...props} />
-      <NavItem value="next" {...props} />
+    <div className="flex px-3 py-2 space-x-4 list-none overscroll-x-auto">
+      <NavItem value="Все" {...props} />
+      <NavItem value="Сайты" {...props} />
+      <NavItem value="Мобильные приложения" {...props} />
     </div>
   )
 }
