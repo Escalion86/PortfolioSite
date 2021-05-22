@@ -16,6 +16,7 @@ const About = () => {
         Разработчик сайтов и приложений полного цикла (FullStack Developer).{' '}
         <br />
         Мой девиз: <i>"Нет ничего невозможного"</i>
+        <br />
         Мне нравится делать качественные продукты, которые помогают людям
         {/* I am currently pursuing B.Tech Degree(Final Year) in Computer Science
         Engineering from Academy of Technology/ I have 3+ years of experience in
