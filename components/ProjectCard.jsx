@@ -16,28 +16,27 @@ function ProjectCard({
     github_url,
     key_techs,
   },
-  showDetail,
-  setShowDetail,
+  // showDetail,
+  onClick,
 }) {
   return (
     <div>
-      <Image
-        src={image_url}
-        alt={name['ru']}
-        className="cursor-pointer"
-        onClick={() => setShowDetail(id)}
-        layout="responsive"
-        height="200"
-        width="300"
-      />
-      <p className="my-2 text-center">{name && name['ru']}</p>
-      {showDetail === id && (
-        <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 rounded-lg md:p-10 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100">
+      <div>
+        <Image
+          src={image_url}
+          alt={name['ru']}
+          className="cursor-pointer"
+          onClick={onClick}
+          layout="responsive"
+          height="200"
+          width="300"
+        />
+        <p className="my-2 text-center">{name && name['ru']}</p>
+      </div>
+      {/* {showDetail === id && (
+        <div className="z-10 grid w-full h-auto p-2 text-black bg-gray-100 rounded-lg md:p-10 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100">
           <motion.div variants={stagger} initial="initial" animate="animate">
-            <motion.div
-              variants={fadeInUp}
-              className="border-4 border-gray-100"
-            >
+            <motion.div>
               <Image
                 src={image_url}
                 alt={name['ru']}
@@ -95,7 +94,7 @@ function ProjectCard({
             <MdClose size={30} />
           </button>
         </div>
-      )}
+      )} */}
     </div>
   )
 }

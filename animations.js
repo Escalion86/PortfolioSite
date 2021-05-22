@@ -13,6 +13,7 @@ export const stagger = {
   animate: {
     transition: {
       staggerChildren: 0.1,
+      delay: 0.2,
     },
   },
 }
@@ -31,6 +32,24 @@ export const routeAnimation = {
     opacity: 0,
     transition: {
       delay: 0.1,
+      ease: 'easeInOut',
+    },
+  },
+}
+export const modalAppear = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.2,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.2,
       ease: 'easeInOut',
     },
   },
