@@ -29,7 +29,7 @@ function ProjectModal({
     >
       <div className="relative grid w-full h-auto p-2 text-black bg-gray-100 border rounded-lg md:p-10 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100">
         <motion.div variants={stagger} initial="initial" animate="animate">
-          <motion.div>
+          <motion.div variants={fadeInUp}>
             <Image
               src={image_url}
               alt={name['ru']}
@@ -40,7 +40,7 @@ function ProjectModal({
           </motion.div>
           <motion.div
             variants={fadeInUp}
-            className="flex flex-col justify-center my-4 space-y-2"
+            className="flex flex-row flex-wrap gap-3 my-4"
           >
             <a
               href={deployed_url}
@@ -79,7 +79,12 @@ function ProjectModal({
               </span>
             ))}
           </motion.div>
-          <Bar value={{ level: progress }} />
+          <div className="flex items-center mt-3">
+            <span>Прогресс</span>
+            <span className="flex-1 ml-2">
+              <Bar value={{ level: progress, name: progress + '%' }} center />
+            </span>
+          </div>
         </motion.div>
         <button
           onClick={onClose}

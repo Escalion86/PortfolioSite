@@ -218,7 +218,7 @@ export const projects = [
       ru: 'CRM для людей продающих свои услуги или товары',
     },
     image_url:
-      'https://github.com/Escalion86/InterDB/blob/master/Promo_IndividualCRM.jpg?raw=true',
+      'https://github.com/Escalion86/InterDB/blob/master/Promo_IndividualCRM.png?raw=true',
     key_techs: ['React Native', 'Expo'],
     github_url: 'https://github.com/Escalion86/InterDB',
     deployed_url:
@@ -237,7 +237,7 @@ export const projects = [
       ru: 'Моё портфолио. Собственно это сайт на котором вы сейчас и находитесь',
     },
     image_url:
-      'https://github.com/Escalion86/InterDB/blob/master/Promo_IndividualCRM.jpg?raw=true',
+      'https://github.com/Escalion86/PortfolioSite/blob/main/Screenshot.png?raw=true',
     key_techs: ['React', 'Next.js', 'TailwindCSS'],
     github_url: 'https://github.com/Escalion86/PortfolioSite',
     deployed_url:

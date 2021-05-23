@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion'
 
-const Bar = ({ value: { Icon = null, level = 0, name = '' } }) => {
+const Bar = ({
+  value: { Icon = null, level = 0, name = '' },
+  center = false,
+}) => {
   const bar_width = `${level}%`
 
   const variants = {
@@ -10,10 +13,10 @@ const Bar = ({ value: { Icon = null, level = 0, name = '' } }) => {
     animate: {
       width: bar_width,
       transition: {
-        duration: 0.4,
-        type: 'spring',
-        damping: 10,
-        stiffness: 100,
+        duration: 1,
+        // type: 'spring',
+        // damping: 10,
+        // stiffness: 100,
       },
     },
   }
@@ -21,7 +24,10 @@ const Bar = ({ value: { Icon = null, level = 0, name = '' } }) => {
   return (
     <div className="my-2 text-white bg-gray-300 rounded-full dark:bg-dark-300 dark:bg-black-500">
       <motion.div
-        className="flex items-center px-3 py-1 space-x-2 rounded-full bg-gradient-to-r from-primary to-secondary"
+        className={
+          'flex items-center  px-3 py-1 space-x-2 rounded-full bg-gradient-to-r from-primary to-secondary' +
+          (center ? ' justify-center' : '')
+        }
         style={{
           width: bar_width,
         }}
