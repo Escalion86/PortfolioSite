@@ -97,7 +97,7 @@ const Sidebar = () => {
             <AiOutlineWhatsApp className="w-8 h-8 cursor-pointer" />
           </a>
           <a
-            href="viber://chat:+79138370020"
+            href="viber://chat?number=%2B79138370020"
             rel="nofollow"
             style={{ color: '#7360f2' }}
           >
