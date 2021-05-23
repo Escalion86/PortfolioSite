@@ -22,7 +22,7 @@ const Bar = ({
   }
 
   return (
-    <div className="my-2 text-white bg-gray-300 rounded-full dark:bg-dark-300 dark:bg-black-500">
+    <div className="my-2 text-white bg-gray-300 rounded-full dark:bg-dark-200 dark:bg-black-500">
       <motion.div
         className={
           'flex items-center  px-3 py-1 space-x-2 rounded-full bg-gradient-to-r from-primary to-secondary' +
