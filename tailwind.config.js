@@ -5,7 +5,6 @@ module.exports = {
   theme: {
     fontFamily: {
       pattaya: ['Pattaya', 'sans-serif'],
-      lobster: ['Lobster', 'cursive'],
     },
     boxShadow: {
       'custom-light': '0 0 10px #313131',
