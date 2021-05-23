@@ -10,7 +10,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap"
             rel="stylesheet"
           />
-          <title>Разработчик сайтов и приложений Алексей Белинский</title>
           <meta
             name="description"
             content="Профессиональный FullStack разработчик сайтов. Разработка от лендингов, до крупных проектов с базами данных и административной панелью."
@@ -19,6 +18,7 @@ class MyDocument extends Document {
             name="keywords"
             content="Программист, Разработчик сайтов, Разработка сайтов, Разработчик приложений, Разработчик приложения, Разработка приложения, Разработка приложений, Fullstack developer, developer"
           />
+          <title>Разработчик сайтов и приложений Алексей Белинский</title>
         </Head>
         <body className="bg-gradient-to-r from-primary to-secondary dark:from-dark-500 dark:to-dark-700 dark:text-white">
           <Main />
