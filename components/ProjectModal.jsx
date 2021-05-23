@@ -26,8 +26,12 @@ function ProjectModal({
       animate="animate"
       exit="exit"
       className="fixed top-0 bottom-0 left-0 right-0 z-10 flex items-center justify-center h-full px-5 m-0 bg-black bg-opacity-80 sm:px-20 md:px-28 lg:px-20 xl:px-48"
+      onClick={() => onClose()}
     >
-      <div className="relative grid w-full h-auto p-2 text-black bg-gray-100 border rounded-lg md:p-10 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100">
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="relative grid w-full h-auto p-2 text-black bg-gray-100 border rounded-lg md:p-10 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100"
+      >
         <motion.div variants={stagger} initial="initial" animate="animate">
           <motion.div variants={fadeInUp}>
             <Image
