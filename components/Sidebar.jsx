@@ -48,7 +48,7 @@ const Sidebar = () => {
         {/* <a href="">
           <AiFillYoutube className="w-8 h-8 cursor-pointer" />
         </a> */}
-        <a href="https://github.com/Escalion86">
+        <a href="https://github.com/Escalion86" rel="nofollow">
           <AiFillGithub className="w-8 h-8 cursor-pointer" />
         </a>
         {/* <a href="">
@@ -67,13 +67,21 @@ const Sidebar = () => {
 
         <div className="flex items-center justify-center space-x-2">
           <AiOutlineMail />
-          <a href="mailto:escalion@mail.ru" className="my-2 hover:text-primary">
+          <a
+            href="mailto:escalion@mail.ru"
+            rel="nofollow"
+            className="my-2 hover:text-primary"
+          >
             escalion@mail.ru
           </a>
         </div>
         <div className="flex items-center justify-center space-x-2">
           <AiOutlinePhone />
-          <a href="tel:+79138370020" className="my-2 hover:text-primary">
+          <a
+            href="tel:+79138370020"
+            rel="nofollow"
+            className="my-2 hover:text-primary"
+          >
             +7-913-837-0020
           </a>
         </div>
@@ -83,14 +91,23 @@ const Sidebar = () => {
         </a> */}
           <a
             href="https://api.whatsapp.com/send?phone=+79138370020"
+            rel="nofollow"
             style={{ color: '#43d854' }}
           >
             <AiOutlineWhatsApp className="w-8 h-8 cursor-pointer" />
           </a>
-          <a href="viber://chat:+79138370020" style={{ color: '#7360f2' }}>
+          <a
+            href="viber://chat:+79138370020"
+            rel="nofollow"
+            style={{ color: '#7360f2' }}
+          >
             <FaViber className="w-8 h-8 cursor-pointer" />
           </a>
-          <a href="http://t.me/escalion" style={{ color: '#0088cc' }}>
+          <a
+            href="http://t.me/escalion"
+            rel="nofollow"
+            style={{ color: '#0088cc' }}
+          >
             <FaTelegramPlane className="w-8 h-8 cursor-pointer" />
           </a>
           {/* <a href="">
