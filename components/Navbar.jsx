@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 
 const NavItem = ({ href, name, setActiveItem, activeItem, itemName }) => {
   return activeItem !== itemName ? (
-    <Link href={href}>
+    <Link scroll={false} href={href}>
       <span
         onClick={() => setActiveItem(itemName)}
         className="mx-2 cursor-pointer hover:text-primary"
