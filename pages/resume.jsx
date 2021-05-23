@@ -37,7 +37,7 @@ const Resume = () => {
             {/* <p className="font-semibold">Tata Consultancy Services</p> */}
             <p className="my-3">
               Разработка собственных проектов и проетов по заказу. Завершено
-              более 10 проектов крупных проетов
+              более 10 крупных проектов
             </p>
           </div>
         </motion.div>
