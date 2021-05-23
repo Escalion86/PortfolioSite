@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { AiFillGithub, AiFillProject } from 'react-icons/ai'
 import { MdClose } from 'react-icons/md'
 import { fadeInUp, routeAnimation, stagger, modalAppear } from '../animations'
+import Bar from './Bar'
 
 function ProjectModal({
   project: {
@@ -14,6 +15,7 @@ function ProjectModal({
     description,
     github_url,
     key_techs,
+    progress,
   },
   onClose,
 }) {
@@ -77,6 +79,7 @@ function ProjectModal({
               </span>
             ))}
           </motion.div>
+          <Bar value={{ level: progress }} />
         </motion.div>
         <button
           onClick={onClose}

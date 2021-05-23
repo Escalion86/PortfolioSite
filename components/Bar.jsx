@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-const Bar = ({ value: { Icon, level, name } }) => {
+const Bar = ({ value: { Icon = null, level = 0, name = '' } }) => {
   const bar_width = `${level}%`
 
   const variants = {
@@ -29,9 +29,11 @@ const Bar = ({ value: { Icon, level, name } }) => {
         initial="initial"
         animate="animate"
       >
-        <div>
-          <Icon className="w-3 h-3" />
-        </div>
+        {Icon && (
+          <div>
+            <Icon className="w-3 h-3" />
+          </div>
+        )}
         <div className="ml-2">{name}</div>
       </motion.div>
     </div>

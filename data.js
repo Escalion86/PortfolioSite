@@ -132,7 +132,7 @@ export const projects = [
     key_techs: ['React', 'Axios'],
     github_url: 'https://github.com/Escalion86/BreakingBad-Site',
     deployed_url: 'http://breaking-bad.escalion.ru',
-    status: 'Complite',
+    progress: 100,
     category: ['Сайты'],
   },
   {
@@ -150,7 +150,7 @@ export const projects = [
     key_techs: ['React', 'Redux', 'React-router', 'Reactstrap'],
     github_url: 'https://github.com/Escalion86/GameOfThrones',
     deployed_url: 'http://got.escalion.ru',
-    status: 'In developing',
+    progress: 80,
     category: ['Сайты'],
   },
   {
@@ -168,7 +168,7 @@ export const projects = [
     key_techs: ['Webpack', 'Json-server'],
     github_url: 'https://github.com/Escalion86/SiteFood',
     deployed_url: 'http://food.escalion.ru',
-    status: 'Complite',
+    progress: 100,
     category: ['Сайты'],
   },
   {
@@ -186,7 +186,7 @@ export const projects = [
     key_techs: ['React', 'Redux', 'React-router'],
     github_url: 'https://github.com/Escalion86/Unsplash',
     deployed_url: 'http://picso.escalion.ru',
-    status: 'In developing',
+    progress: 90,
     category: ['Сайты'],
   },
   {
@@ -204,26 +204,45 @@ export const projects = [
     key_techs: ['React', 'Tailwind CSS'],
     github_url: 'https://github.com/Escalion86/lubprod',
     deployed_url: 'http://lubprod.escalion.ru',
-    status: 'In developing',
+    progress: 95,
     category: ['Сайты'],
   },
   {
     id: 6,
     name: {
-      en: 'LubProd',
+      en: 'IndividualCRM',
       ru: 'IndividualCRM',
     },
     description: {
-      en: 'Order a site for a ready layout from LubProd',
+      en: '',
       ru: 'CRM для людей продающих свои услуги или товары',
     },
     image_url:
       'https://github.com/Escalion86/InterDB/blob/master/Promo_IndividualCRM.jpg?raw=true',
-    key_techs: ['React Native'],
+    key_techs: ['React Native', 'Expo'],
     github_url: 'https://github.com/Escalion86/InterDB',
     deployed_url:
       'https://play.google.com/store/apps/details?id=com.escalion.Individual_CRM',
-    status: 'In developing',
+    progress: 50,
     category: ['Мобильные приложения'],
+  },
+  {
+    id: 6,
+    name: {
+      en: 'My portfolio on Escalion.ru',
+      ru: 'Мое портфолио на Escalion.ru',
+    },
+    description: {
+      en: '',
+      ru: 'Моё портфолио. Собственно это сайт на котором вы сейчас и находитесь',
+    },
+    image_url:
+      'https://github.com/Escalion86/InterDB/blob/master/Promo_IndividualCRM.jpg?raw=true',
+    key_techs: ['React', 'Next.js', 'TailwindCSS'],
+    github_url: 'https://github.com/Escalion86/PortfolioSite',
+    deployed_url:
+      'https://play.google.com/store/apps/details?id=com.escalion.Individual_CRM',
+    progress: 100,
+    category: ['Сайты'],
   },
 ]
