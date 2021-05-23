@@ -227,7 +227,7 @@ export const projects = [
     category: ['Мобильные приложения'],
   },
   {
-    id: 6,
+    id: 7,
     name: {
       en: 'My portfolio on Escalion.ru',
       ru: 'Мое портфолио на Escalion.ru',
