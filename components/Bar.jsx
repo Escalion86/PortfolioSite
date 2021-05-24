@@ -15,7 +15,7 @@ const Bar = ({
     animate: {
       width: bar_width,
       transition: {
-        duration: 1,
+        duration: 1.25,
         // type: 'spring',
         // damping: 10,
         // stiffness: 100,
@@ -43,7 +43,7 @@ const Bar = ({
           </div>
         )}
         <div className="ml-2">
-          {countUp ? <CountUp end={level} duration={1.25} /> : name}
+          {countUp ? <CountUp end={level} duration={1.5} /> : name}
         </div>
       </motion.div>
     </div>
