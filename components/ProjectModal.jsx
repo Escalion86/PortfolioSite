@@ -83,7 +83,7 @@ function ProjectModal({
               </span>
             ))}
           </motion.div>
-          <div className="flex items-center mt-3">
+          <motion.div variants={fadeInUp} className="flex items-center mt-3">
             <span>Прогресс</span>
             <span className="flex-1 ml-2">
               <Bar
@@ -92,7 +92,7 @@ function ProjectModal({
                 countUp
               />
             </span>
-          </div>
+          </motion.div>
         </motion.div>
         <button
           onClick={onClose}
