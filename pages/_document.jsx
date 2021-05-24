@@ -10,7 +10,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap"
             rel="stylesheet"
           />
-          <meta charset="UTF-8" />
+          <meta charSet="UTF-8" />
           <meta
             name="description"
             content="Профессиональный FullStack разработчик сайтов. Разработка от лендингов, до крупных проектов с базами данных и административной панелью."
