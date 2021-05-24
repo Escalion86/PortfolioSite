@@ -86,7 +86,11 @@ function ProjectModal({
           <div className="flex items-center mt-3">
             <span>Прогресс</span>
             <span className="flex-1 ml-2">
-              <Bar value={{ level: progress, name: progress + '%' }} center />
+              <Bar
+                value={{ level: progress, name: progress + '%' }}
+                center
+                countUp
+              />
             </span>
           </div>
         </motion.div>

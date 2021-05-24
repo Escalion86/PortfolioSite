@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion'
+import CountUp from 'react-countup'
 
 const Bar = ({
   value: { Icon = null, level = 0, name = '' },
   center = false,
+  countUp = false,
 }) => {
   const bar_width = `${level}%`
 
@@ -40,7 +42,9 @@ const Bar = ({
             <Icon className="w-3 h-3" />
           </div>
         )}
-        <div className="ml-2">{name}</div>
+        <div className="ml-2">
+          {countUp ? <CountUp end={level} duration={1.25} /> : name}
+        </div>
       </motion.div>
     </div>
   )
