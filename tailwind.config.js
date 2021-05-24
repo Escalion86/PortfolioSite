@@ -27,6 +27,9 @@ module.exports = {
   variants: {
     extend: {
       boxShadow: ['dark'],
+      padding: {
+        20: '5rem',
+      },
     },
   },
   plugins: [],

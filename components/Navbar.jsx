@@ -24,9 +24,11 @@ const Navbar = () => {
     if (pathname === '/') setActiveItem('About')
     else if (pathname === '/projects') setActiveItem('Projects')
     else if (pathname === '/resume') setActiveItem('Resume')
+    else setActiveItem('')
+    console.log('pathname :>> ', pathname)
   }, [])
 
-  return (
+  return activeItem ? (
     <div className="flex justify-between px-5 py-3 my-3">
       <span className="text-xl font-bold border-b-4 border-primary md:text-2xl">
         {activeItem === 'About'
@@ -58,6 +60,10 @@ const Navbar = () => {
           activeItem={activeItem}
         />
       </div>
+    </div>
+  ) : (
+    <div className="flex items-center justify-center px-5 py-3 my-3 text-2xl">
+      404
     </div>
   )
 }
