@@ -63,7 +63,7 @@ const Sidebar = () => {
       >
         <div className="flex items-center justify-center space-x-2">
           <GoLocation />
-          <span className="my-2">Россия, Красноярск</span>
+          <address className="my-2">Россия, Красноярск</address>
         </div>
 
         <div className="flex items-center justify-center space-x-2">
