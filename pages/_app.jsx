@@ -5,6 +5,7 @@ import '../styles/globals.css'
 import { ThemeProvider } from 'next-themes'
 import { AnimatePresence } from 'framer-motion'
 import { Router } from 'next/router'
+import withYM from 'next-ym'
 import Head from 'next/head'
 
 function MyApp({ Component, pageProps, router }) {
@@ -28,4 +29,5 @@ function MyApp({ Component, pageProps, router }) {
   )
 }
 
-export default MyApp
+// export default MyApp
+export default withYM('79534696', Router)(MyApp)
