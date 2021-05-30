@@ -27,7 +27,7 @@ const Bar = ({
     <div className="my-2 text-white bg-gray-300 rounded-full dark:bg-dark-200 dark:bg-black-500">
       <motion.div
         className={
-          'flex items-center  px-3 py-1 space-x-2 rounded-full bg-gradient-to-r from-primary to-secondary' +
+          'flex flex-nowrap items-center  px-3 py-1 space-x-2 rounded-full bg-gradient-to-r from-primary to-secondary' +
           (center ? ' justify-center' : '')
         }
         style={{
@@ -42,7 +42,7 @@ const Bar = ({
             <Icon className="w-3 h-3" />
           </div>
         )}
-        <div className="ml-2">
+        <div className="ml-2 whitespace-nowrap">
           {countUp ? <CountUp end={level} duration={1.5} /> : name}
         </div>
       </motion.div>
