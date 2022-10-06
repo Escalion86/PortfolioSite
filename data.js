@@ -118,6 +118,24 @@ export const tools = [
 
 export const projects = [
   {
+    id: 0,
+    name: {
+      en: 'Half Success',
+      ru: 'Половинка успеха',
+    },
+    description: {
+      en: 'Website + CRM system for dating center. Implemented user registration, admin panel, creation and editing of events, user rights system, as well as financial accounting with statistics',
+      ru: 'Сайт + CRM система для центра знакомств. РЕализована регистрация пользователей, админка , создание и редактирование мероприятий, система прав пользователей, а также учет финансов со статистикой',
+    },
+    image_url:
+      'https://github.com/Escalion86/polovinka_uspeha/blob/main/screenshot.png?raw=true',
+    key_techs: ['React', 'Next.js', 'TailwindCSS', 'MongoDB'],
+    github_url: 'https://github.com/Escalion86/polovinka_uspeha',
+    deployed_url: 'https://половинкауспеха.рф',
+    progress: 100,
+    category: ['Сайты'],
+  },
+  {
     id: 1,
     name: {
       en: 'Breaking Bad',
