@@ -5,6 +5,16 @@ import { MdClose } from 'react-icons/md'
 import { fadeInUp, routeAnimation, stagger, modalAppear } from '../animations'
 import Bar from './Bar'
 
+const AButton = ({ name, url, Icon }) => (
+  <a
+    href={url}
+    className="flex items-center px-4 py-2 space-x-3 text-lg duration-300 bg-gray-200 hover:bg-purple-300 dark:bg-dark-200 dark:hover:bg-purple-900"
+  >
+    {Icon && <Icon />}
+    <span>{name}</span>
+  </a>
+)
+
 function ProjectModal({
   project: {
     id,
@@ -46,18 +56,12 @@ function ProjectModal({
             variants={fadeInUp}
             className="flex flex-row flex-wrap gap-3 my-4"
           >
-            <a
-              href={deployed_url}
-              className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200"
-            >
-              <AiFillProject /> <span>Посмотреть проект</span>
-            </a>
-            <a
-              href={github_url}
-              className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200"
-            >
-              <AiFillGithub /> <span>Github</span>
-            </a>
+            <AButton
+              url={deployed_url}
+              Icon={AiFillProject}
+              name="Посмотреть проект"
+            />
+            <AButton url={github_url} Icon={AiFillGithub} name="Github" />
           </motion.div>
         </motion.div>
         <motion.div variants={stagger} initial="initial" animate="animate">

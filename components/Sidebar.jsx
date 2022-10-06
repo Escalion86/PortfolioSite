@@ -45,7 +45,7 @@ const Sidebar = () => {
         Скачать резюме
       </a> */}
       {/* social icons */}
-      <div className="flex justify-around w-9/12 mx-auto my-5 text-primary md:w-full">
+      <div className="flex justify-around w-9/12 mx-auto my-5 duration-300 transform text-primary md:w-full hover:scale-110">
         {/* <a href="">
           <AiFillYoutube className="w-8 h-8 cursor-pointer" />
         </a> */}
@@ -91,6 +91,7 @@ const Sidebar = () => {
           <AiFillYoutube className="w-8 h-8 cursor-pointer" />
         </a> */}
           <a
+            className="duration-300 transform hover:scale-110"
             href="https://api.whatsapp.com/send?phone=+79138370020"
             rel="nofollow"
             style={{ color: '#43d854' }}
@@ -98,6 +99,7 @@ const Sidebar = () => {
             <AiOutlineWhatsApp className="w-8 h-8 cursor-pointer" />
           </a>
           <a
+            className="duration-300 transform hover:scale-110"
             href="viber://chat?number=%2B79138370020"
             rel="nofollow"
             style={{ color: '#7360f2' }}
@@ -105,6 +107,7 @@ const Sidebar = () => {
             <FaViber className="w-8 h-8 cursor-pointer" />
           </a>
           <a
+            className="duration-300 transform hover:scale-110"
             href="http://t.me/escalion"
             rel="nofollow"
             style={{ color: '#0088cc' }}

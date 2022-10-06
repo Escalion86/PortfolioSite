@@ -53,19 +53,19 @@ const About = () => {
 
 export default About
 
-export const getServerSideProps = async (context) => {
-  // const res = await fetch(`${process.env.VERCEL_URL}/api/services`)
-  // const data = await res.json()
+// export const getServerSideProps = async (context) => {
+//   // const res = await fetch(`${process.env.VERCEL_URL}/api/services`)
+//   // const data = await res.json()
 
-  // console.log('SERVER', services)
+//   // console.log('SERVER', services)
 
-  return {
-    props: {
-      // services: data.services,
-      endpoint: process.env.VERCEL_URL,
-    },
-  }
-}
+//   return {
+//     props: {
+//       // services: data.services,
+//       endpoint: process.env.VERCEL_URL,
+//     },
+//   }
+// }
 
 // export const getStaticProps = async (context) => {
 //   const res = await fetch('http://localhost:3000/api/services')
