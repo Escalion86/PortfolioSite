@@ -129,7 +129,7 @@ export const projects = [
     },
     image_url:
       'https://github.com/Escalion86/polovinka_uspeha/blob/main/screenshot.png?raw=true',
-    key_techs: ['React', 'Next.js', 'TailwindCSS', 'MongoDB'],
+    key_techs: ['React', 'Next.js', 'TailwindCSS', 'MongoDB', 'Recoil'],
     github_url: 'https://github.com/Escalion86/polovinka_uspeha',
     deployed_url: 'https://половинкауспеха.рф',
     progress: 100,
