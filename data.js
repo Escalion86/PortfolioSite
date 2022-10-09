@@ -8,40 +8,40 @@ export const services = [
   {
     title: { en: 'Frontend Development', ru: 'Frontend Разработчик' },
     about: {
-      en: 'I can build a beautiful and scalable SPA using <b>HTML</b>, <b>CSS</b> and <b>React.js</b>',
-      ru: 'Верстка красивых и адаптивных для разных устройств сайтов',
+      en: 'I can build a beautiful and scalable SPA using <b>HTML</b>, <b>CSS</b> and <b>React.js</b>.',
+      ru: 'Верстка красивых и адаптивных для разных устройств сайтов.',
     },
     Icon: RiComputerLine,
   },
   {
     title: { en: 'Backend Development', ru: 'Backend Разработчик' },
     about: {
-      en: 'Handle database, server, API using <b>Express</b> & other popular frameworks',
-      ru: 'Управление базами данных, сервером и API с помощью популярных инструментов',
+      en: 'Handle database, server, API using <b>Express</b> & other popular frameworks.',
+      ru: 'Управление базами данных, сервером и API с помощью популярных инструментов.',
     },
     Icon: FaServer,
   },
   {
     title: { en: 'API Development', ru: 'Интеграция сервисов' },
     about: {
-      en: 'I can develop robust REST API using <b>django-rest-api</b> & <b>Node API</b>',
-      ru: 'Интеграция любых сервисов где есть API, например подключение CRM или эквайринга',
+      en: 'I can develop robust REST API using <b>django-rest-api</b> & <b>Node API</b>.',
+      ru: 'Интеграция любых сервисов где есть API, например подключение CRM или эквайринга.',
     },
     Icon: AiOutlineApi,
   },
   {
     title: { en: 'UI/UX designer', ru: 'UI/UX Дизайнер' },
     about: {
-      en: 'Stunning user interface designer useng <>Figma</> and <b>Framer</b>',
-      ru: 'Проектирование интерфейса приложений на основе исследований пользовательского опыта и поведения',
+      en: 'Stunning user interface designer useng <>Figma</> and <b>Framer</b>.',
+      ru: 'Проектирование интерфейса приложений на основе исследований пользовательского опыта и поведения.',
     },
     Icon: AiOutlineAntDesign,
   },
   {
     title: { en: 'Whatever', ru: 'Мобильный разработчик' },
     about: {
-      en: 'Lorem ipsum dolor sit amet consectetur',
-      ru: 'Разработка мобильных приложений для iPhone и для устройств на базе ОС Android',
+      en: 'Lorem ipsum dolor sit amet consectetur.',
+      ru: 'Разработка мобильных приложений для iPhone и для устройств на базе ОС Android.',
     },
     Icon: MdPhonelinkSetup,
   },
@@ -49,7 +49,7 @@ export const services = [
     title: { en: 'Competitive Coder', ru: 'Слежение за трендами' },
     about: {
       en: '',
-      ru: 'Ежедневная практика и изучение трендов для поддержания проеков на современном уровне',
+      ru: 'Ежедневная практика и изучение трендов для поддержания проеков на современном уровне.',
     },
     Icon: MdDeveloperMode,
   },
