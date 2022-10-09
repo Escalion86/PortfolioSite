@@ -258,8 +258,7 @@ export const projects = [
       'https://github.com/Escalion86/PortfolioSite/blob/main/Screenshot.png?raw=true',
     key_techs: ['React', 'Next.js', 'TailwindCSS'],
     github_url: 'https://github.com/Escalion86/PortfolioSite',
-    deployed_url:
-      'https://play.google.com/store/apps/details?id=com.escalion.Individual_CRM',
+    deployed_url: 'https://escalion.ru',
     progress: 100,
     category: ['Сайты'],
   },
