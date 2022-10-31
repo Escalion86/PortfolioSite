@@ -76,7 +76,7 @@ function ProjectModal({
           </motion.h3>
           <motion.div
             variants={fadeInUp}
-            className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider"
+            className="flex flex-wrap mt-5 text-sm tracking-wider gap-x-2"
           >
             {key_techs.map((tech) => (
               <span
