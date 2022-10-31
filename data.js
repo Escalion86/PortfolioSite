@@ -125,7 +125,7 @@ export const projects = [
     },
     description: {
       en: 'Website + CRM system for dating center. Implemented user registration, admin panel, creation and editing of events, user rights system, as well as financial accounting with statistics',
-      ru: 'Сайт + CRM система для центра знакомств. РЕализована регистрация пользователей, админка , создание и редактирование мероприятий, система прав пользователей, а также учет финансов со статистикой',
+      ru: 'Сайт + CRM система для центра знакомств. Реализована регистрация пользователей, админка , создание и редактирование мероприятий, система прав пользователей, а также учет финансов со статистикой',
     },
     image_url:
       'https://github.com/Escalion86/polovinka_uspeha/blob/main/screenshot.png?raw=true',
