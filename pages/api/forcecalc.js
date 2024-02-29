@@ -9,9 +9,10 @@ export default async function handler(req, res) {
     try {
       const code = body?.code
       if (code) {
+        console.log('code :>> ', code)
         // console.log('req :>> ', Object.keys(req))
-        console.log('req.headers :>> ', req.headers)
-        console.log('eq.socket?.remoteAddress :>> ', req.socket?.remoteAddress)
+        // console.log('req.headers :>> ', req.headers)
+        // console.log('eq.socket?.remoteAddress :>> ', req.socket?.remoteAddress)
         const clientIP =
           req.headers['x-real-ip']?.split(',').shift() ||
           req.socket?.remoteAddress
