@@ -222,7 +222,7 @@ export const projects = [
     key_techs: ['React', 'Tailwind CSS'],
     github_url: 'https://github.com/Escalion86/lubprod',
     deployed_url: 'http://lubprod.escalion.ru',
-    progress: 95,
+    progress: 100,
     category: ['Сайты'],
   },
   {
@@ -241,7 +241,7 @@ export const projects = [
     github_url: 'https://github.com/Escalion86/InterDB',
     deployed_url:
       'https://play.google.com/store/apps/details?id=com.escalion.Individual_CRM',
-    progress: 50,
+    progress: 60,
     category: ['Мобильные приложения'],
   },
   {
@@ -261,5 +261,43 @@ export const projects = [
     deployed_url: 'https://escalion.ru',
     progress: 100,
     category: ['Сайты'],
+  },
+  {
+    id: 8,
+    name: {
+      en: 'ForceCalc',
+      ru: 'ForceCalc',
+    },
+    description: {
+      en: 'App for Magicans',
+      ru: 'Приложение для фокусников',
+    },
+    image_url:
+      'https://github.com/Escalion86/ForceCalc/blob/main/assets/splash.png?raw=true',
+    key_techs: ['React Native', 'Expo'],
+    github_url: 'https://github.com/Escalion86/ForceCalc',
+    // deployed_url:
+    //   'https://play.google.com/store/apps/details?id=com.escalion.Individual_CRM',
+    progress: 100,
+    category: ['Мобильные приложения'],
+  },
+  {
+    id: 9,
+    name: {
+      en: 'Cheese2',
+      ru: 'Cheese2',
+    },
+    description: {
+      en: 'App for Magicans',
+      ru: 'Приложение для фокусников',
+    },
+    image_url:
+      'https://github.com/Escalion86/Cheese2/blob/main/assets/images/splash.png?raw=true',
+    key_techs: ['React Native', 'Expo'],
+    github_url: 'https://github.com/Escalion86/Cheese2',
+    // deployed_url:
+    //   'https://play.google.com/store/apps/details?id=com.escalion.Individual_CRM',
+    progress: 90,
+    category: ['Мобильные приложения'],
   },
 ]

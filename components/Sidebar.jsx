@@ -1,16 +1,13 @@
 import {
   AiFillGithub,
-  // AiFillLinkedin,
-  // AiFillYoutube,
   AiOutlinePhone,
   AiOutlineMail,
   AiOutlineWhatsApp,
 } from 'react-icons/ai'
 import { FaViber, FaTelegramPlane } from 'react-icons/fa'
 import { GoLocation } from 'react-icons/go'
-// import { GiTie } from 'react-icons/gi'
 import { useTheme } from 'next-themes'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 
 const Sidebar = () => {
   const { theme, setTheme } = useTheme()
@@ -25,10 +22,10 @@ const Sidebar = () => {
         src="https://avatars.githubusercontent.com/u/67676333?v=4"
         alt="avatar"
         className="mx-auto rounded-full"
-        height="128px"
-        width="128px"
+        height={128}
+        width={128}
         layout="intrinsic"
-        quality="100"
+        // quality="100"
       />
       <h3 className="my-4 text-3xl font-medium tracking-wider font-pattaya">
         <span className="text-primary">Алексей</span> Белинский

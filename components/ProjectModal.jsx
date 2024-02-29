@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { AiFillGithub, AiFillProject } from 'react-icons/ai'
 import { MdClose } from 'react-icons/md'
-import { fadeInUp, routeAnimation, stagger, modalAppear } from '../animations'
+import { fadeInUp, stagger, modalAppear } from '../animations'
 import Bar from './Bar'
 
 const AButton = ({ name, url, Icon }) => (
@@ -43,26 +43,37 @@ function ProjectModal({
         className="relative grid w-full h-auto p-2 text-black bg-gray-100 border rounded-lg md:p-10 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100"
       >
         <motion.div variants={stagger} initial="initial" animate="animate">
-          <motion.div variants={fadeInUp}>
-            <Image
-              src={image_url}
-              alt={name['ru']}
-              layout="responsive"
-              height="200"
-              width="300"
-            />
-          </motion.div>
           <motion.div
             variants={fadeInUp}
-            className="flex flex-row flex-wrap gap-3 my-4"
+            className="aspect-[3/2] w-full max-w-full relative"
           >
-            <AButton
-              url={deployed_url}
-              Icon={AiFillProject}
-              name="Посмотреть проект"
+            <Image
+              className="object-cover object-center cursor-pointer"
+              src={image_url}
+              alt={name['ru']}
+              // layout="responsive"
+              // height={200}
+              // width={300}
+              fill={true}
             />
-            <AButton url={github_url} Icon={AiFillGithub} name="Github" />
           </motion.div>
+          {(deployed_url || github_url) && (
+            <motion.div
+              variants={fadeInUp}
+              className="flex flex-row flex-wrap gap-3 my-4"
+            >
+              {deployed_url && (
+                <AButton
+                  url={deployed_url}
+                  Icon={AiFillProject}
+                  name="Посмотреть проект"
+                />
+              )}
+              {github_url && (
+                <AButton url={github_url} Icon={AiFillGithub} name="Github" />
+              )}
+            </motion.div>
+          )}
         </motion.div>
         <motion.div variants={stagger} initial="initial" animate="animate">
           <motion.h2

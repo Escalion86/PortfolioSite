@@ -1,6 +1,9 @@
 module.exports = {
   mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     fontFamily: {
@@ -29,15 +32,19 @@ module.exports = {
         'pos-0': '0% 0%',
         'pos-100': '100% 100%',
       },
-    },
-  },
-  variants: {
-    extend: {
       boxShadow: ['dark'],
       padding: {
         20: '5rem',
       },
     },
   },
+  // variants: {
+  //   extend: {
+  //     boxShadow: ['dark'],
+  //     padding: {
+  //       20: '5rem',
+  //     },
+  //   },
+  // },
   plugins: [],
 }
