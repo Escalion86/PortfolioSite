@@ -46,6 +46,11 @@ export default async function handler(req, res) {
 
         // Проверяем есть ли код и его валидность
         if (typeof code !== 'number' || code < 10000000 || code > 99999999) {
+          const history = await CodesCheckHistory.create({
+            date: new Date(),
+            data: { errorCode: 'wrong code', code },
+            clientIP,
+          })
           return res?.status(400).json({
             success: false,
             error: 'Код не верен',
@@ -58,6 +63,11 @@ export default async function handler(req, res) {
           programName: 'ForceCalc',
         })
         if (!result) {
+          const history = await CodesCheckHistory.create({
+            date: new Date(),
+            data: { errorCode: 'code not exist', code },
+            clientIP,
+          })
           return res?.status(400).json({
             success: false,
             error: 'Такого кода не существует',
