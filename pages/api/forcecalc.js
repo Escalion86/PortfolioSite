@@ -1,7 +1,6 @@
 import Codes from '@models/Codes'
 import CodesCheckHistory from '@models/CodesCheckHistory'
 import dbConnect from '@utils/dbConnect'
-import requestIp from 'request-ip'
 
 export default async function handler(req, res) {
   const { query, method, body } = req
@@ -10,7 +9,10 @@ export default async function handler(req, res) {
     try {
       const code = body?.code
       if (code) {
-        const clientIP = requestIp.getClientIp(req)
+        const clientIP =
+          req.headers['x-forwarded-for']?.split(',').shift() ||
+          req.socket?.remoteAddress
+        // const clientIP = requestIp.getClientIp(req)
 
         // Смотрим историю проверок кода (возможно его подбирают)
         const histories = await CodesCheckHistory.find({
