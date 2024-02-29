@@ -51,7 +51,7 @@ export default async function handler(req, res) {
         }
 
         // Проверяем есть ли код и его валидность
-        if (typeof code !== 'number' || code < 10000000 || code > 99999999) {
+        if (code?.length !== 8) {
           const history = await CodesCheckHistory.create({
             date: new Date(),
             data: { errorCode: 'wrong code', code },
