@@ -13,7 +13,7 @@ export default async function handler(req, res) {
         console.log('req.headers :>> ', req.headers)
         console.log('eq.socket?.remoteAddress :>> ', req.socket?.remoteAddress)
         const clientIP =
-          req.headers['x-forwarded-for']?.split(',').shift() ||
+          req.headers['x-real-ip']?.split(',').shift() ||
           req.socket?.remoteAddress
         // const clientIP = requestIp.getClientIp(req)
 
