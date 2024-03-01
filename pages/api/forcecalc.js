@@ -90,7 +90,13 @@ export default async function handler(req, res) {
         })
         return res
           ?.status(201)
-          .json({ success: true, data: { userName: result?.userName } })
+          .json({
+            success: true,
+            data: {
+              userName: result?.userName,
+              expiredDate: result?.expiredDate,
+            },
+          })
       }
 
       return res?.status(200).json({ success: true })
