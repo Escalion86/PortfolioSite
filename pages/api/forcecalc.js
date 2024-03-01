@@ -10,6 +10,7 @@ export default async function handler(req, res) {
       const code = body?.code
       if (code) {
         console.log('code :>> ', code)
+        const data = body?.data
         // console.log('req :>> ', Object.keys(req))
         // console.log('req.headers :>> ', req.headers)
         // console.log('eq.socket?.remoteAddress :>> ', req.socket?.remoteAddress)
@@ -54,7 +55,7 @@ export default async function handler(req, res) {
         if (code?.length !== 8) {
           const history = await CodesCheckHistory.create({
             date: new Date(),
-            data: { errorCode: 'wrong code', code },
+            data: { errorCode: 'wrong code', code, device: data },
             clientIP,
           })
           return res?.status(400).json({
@@ -71,7 +72,7 @@ export default async function handler(req, res) {
         if (!result) {
           const history = await CodesCheckHistory.create({
             date: new Date(),
-            data: { errorCode: 'code not exist', code },
+            data: { errorCode: 'code not exist', code, device: data },
             clientIP,
           })
           return res?.status(400).json({
@@ -83,7 +84,7 @@ export default async function handler(req, res) {
 
         const history = await CodesCheckHistory.create({
           date: new Date(),
-          data: body?.data,
+          data,
           codeId: result._id,
           clientIP,
         })
