@@ -12,13 +12,14 @@ export default async function handler(req, res) {
         console.log('code :>> ', code)
         const data = body?.data
         const isCheckOnly = body?.checkOnly
+
+        const clientIP =
+          req.headers['x-real-ip']?.split(',').shift() ||
+          req.socket?.remoteAddress
         // console.log('req :>> ', Object.keys(req))
         // console.log('req.headers :>> ', req.headers)
         // console.log('eq.socket?.remoteAddress :>> ', req.socket?.remoteAddress)
         if (!isCheckOnly) {
-          const clientIP =
-            req.headers['x-real-ip']?.split(',').shift() ||
-            req.socket?.remoteAddress
           // const clientIP = requestIp.getClientIp(req)
 
           // Смотрим историю проверок кода (возможно его подбирают)
