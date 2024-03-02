@@ -12,6 +12,7 @@ export default async function handler(req, res) {
         console.log('code :>> ', code)
         const data = body?.data
         const isCheckOnly = body?.checkOnly
+        console.log('body :>> ', body)
 
         const clientIP =
           req.headers['x-real-ip']?.split(',').shift() ||
