@@ -11,53 +11,58 @@ export default async function handler(req, res) {
       if (code) {
         console.log('code :>> ', code)
         const data = body?.data
+        const isCheckOnly = body?.checkOnly
         // console.log('req :>> ', Object.keys(req))
         // console.log('req.headers :>> ', req.headers)
         // console.log('eq.socket?.remoteAddress :>> ', req.socket?.remoteAddress)
-        const clientIP =
-          req.headers['x-real-ip']?.split(',').shift() ||
-          req.socket?.remoteAddress
-        // const clientIP = requestIp.getClientIp(req)
+        if (!isCheckOnly) {
+          const clientIP =
+            req.headers['x-real-ip']?.split(',').shift() ||
+            req.socket?.remoteAddress
+          // const clientIP = requestIp.getClientIp(req)
 
-        // Смотрим историю проверок кода (возможно его подбирают)
-        const histories = await CodesCheckHistory.find({
-          clientIP,
-        })
-          .sort({ createdAt: -1 })
-          .limit(3)
+          // Смотрим историю проверок кода (возможно его подбирают)
+          const histories = await CodesCheckHistory.find({
+            clientIP,
+          })
+            .sort({ createdAt: -1 })
+            .limit(3)
 
-        if (histories?.length >= 3) {
-          const serverDate = new Date()
-          let j = 0
-          for (let i = 0; i < histories.length; i++) {
-            const historyDate = histories[i].createdAt
-            const differenceInDays = Math.round(
-              (serverDate.getTime() - historyDate.getTime()) /
-                (1000 * 3600 * 24)
-            )
-            if (differenceInDays < 1) j++
+          if (histories?.length >= 3) {
+            const serverDate = new Date()
+            let j = 0
+            for (let i = 0; i < histories.length; i++) {
+              const historyDate = histories[i].createdAt
+              const differenceInDays = Math.round(
+                (serverDate.getTime() - historyDate.getTime()) /
+                  (1000 * 3600 * 24)
+              )
+              if (differenceInDays < 1) j++
+            }
+            if (j >= 3)
+              return res?.status(400).json({
+                success: false,
+                error: 'Слишком много попыток ввода',
+                errorCode: 'too many tries',
+                data: {
+                  nextTryDate: new Date(
+                    histories[histories.length - 1].createdAt.getTime() +
+                      1000 * 3600 * 24
+                  ),
+                },
+              })
           }
-          if (j >= 3)
-            return res?.status(400).json({
-              success: false,
-              error: 'Слишком много попыток ввода',
-              errorCode: 'too many tries',
-              data: {
-                nextTryDate: new Date(
-                  histories[histories.length - 1].createdAt.getTime() +
-                    1000 * 3600 * 24
-                ),
-              },
-            })
         }
 
         // Проверяем есть ли код и его валидность
         if (code?.length !== 8) {
-          const history = await CodesCheckHistory.create({
-            date: new Date(),
-            data: { errorCode: 'wrong code', code, device: data },
-            clientIP,
-          })
+          if (!isCheckOnly) {
+            const history = await CodesCheckHistory.create({
+              date: new Date(),
+              data: { errorCode: 'wrong code', code, device: data },
+              clientIP,
+            })
+          }
           return res?.status(400).json({
             success: false,
             error: 'Код не верен',
@@ -70,11 +75,13 @@ export default async function handler(req, res) {
           programName: 'ForceCalc',
         })
         if (!result) {
-          const history = await CodesCheckHistory.create({
-            date: new Date(),
-            data: { errorCode: 'code not exist', code, device: data },
-            clientIP,
-          })
+          if (!isCheckOnly) {
+            const history = await CodesCheckHistory.create({
+              date: new Date(),
+              data: { errorCode: 'code not exist', code, device: data },
+              clientIP,
+            })
+          }
           return res?.status(400).json({
             success: false,
             error: 'Такого кода не существует',
@@ -82,21 +89,21 @@ export default async function handler(req, res) {
           })
         }
 
-        const history = await CodesCheckHistory.create({
-          date: new Date(),
-          data,
-          codeId: result._id,
-          clientIP,
-        })
-        return res
-          ?.status(201)
-          .json({
-            success: true,
-            data: {
-              userName: result?.userName,
-              expiredDate: result?.expiredDate,
-            },
+        if (!isCheckOnly) {
+          const history = await CodesCheckHistory.create({
+            date: new Date(),
+            data,
+            codeId: result._id,
+            clientIP,
           })
+        }
+        return res?.status(201).json({
+          success: true,
+          data: {
+            userName: result?.userName,
+            expiredDate: result?.expiredDate,
+          },
+        })
       }
 
       return res?.status(200).json({ success: true })
