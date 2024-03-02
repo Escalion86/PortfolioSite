@@ -9,7 +9,6 @@ export default async function handler(req, res) {
     try {
       const code = body?.code
       if (code) {
-        console.log('code :>> ', code)
         const data = body?.data
         const isCheckOnly = body?.checkOnly
         console.log('body :>> ', body)
